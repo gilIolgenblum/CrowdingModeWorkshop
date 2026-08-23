@@ -1,7 +1,7 @@
 from .constants import Constants
 from .protein import Protein
 from .cosolute import Cosolute, CosoluteMixture
-from .binary import BinaryCrowdingModel
+from .binary import CrowdingModel
 from .statistics import monte_carlo_subsampling
 
 # Aliases for backwards compatibility with notebooks
@@ -9,14 +9,14 @@ var = Constants
 protein = Protein
 cosolute = Cosolute
 cosolutes = CosoluteMixture
-crowding = BinaryCrowdingModel
+crowding = CrowdingModel
 
 __all__ = [
     "Constants",
     "Protein",
     "Cosolute",
     "CosoluteMixture",
-    "BinaryCrowdingModel",
+    "CrowdingModel",
     "BinaryPlotter",
     "monte_carlo_subsampling",
     "var",

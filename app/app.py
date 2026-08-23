@@ -63,7 +63,7 @@ def run_minimal_simulation_preview(model_type, fitted_model, protein, cosolute_s
     """
     if model_type == "Binary Crowding Model":
         dphiC_min = max((phiC_max - 0.0001) / 9.0, 0.0001)
-        minimal_model = fh_crowding.BinaryCrowdingModel(
+        minimal_model = fh_crowding.CrowdingModel(
             protein=protein, cosolute=cosolute_s, 
             eps=fitted_model.eps, epsTS=fitted_model.epsTS,
             dphiC=dphiC_min, phiC_max=phiC_max, T=T
@@ -842,7 +842,7 @@ if model_type == "Binary Crowding Model":
             nu=nu, chi=chi, chiTS=chiTS,
             phiC_max=0.01, dphiC=0.01
         )
-        model = fh_crowding.BinaryCrowdingModel(
+        model = fh_crowding.CrowdingModel(
             protein=protein, cosolute=cosolute, eps=eps, epsTS=epsTS,
             dphiC=dphiC, phiC_max=phiC_max, T=T,
         )

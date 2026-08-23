@@ -7,7 +7,7 @@ from scipy.optimize import minimize
 from .protein import Protein
 from .cosolute import Cosolute
 
-class BinaryCrowdingModel(Cosolute):
+class CrowdingModel(Cosolute):
     '''
     Mean-field model class, contains class variable and methods that used to solve the folding thermodynamics of
     a protein-cosolute pair  for a set of SASA, nu, chi, and eps.

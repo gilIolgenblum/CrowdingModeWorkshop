@@ -39,14 +39,14 @@ Note: While the Streamlit app is available for non-coding users, these notebooks
 ## Minimal Working Example
 
 ```python
-from fh_crowding import Protein, Cosolute, BinaryCrowdingModel
+from fh_crowding import Protein, Cosolute, CrowdingModel
 
 # Define protein and cosolute parameters
 protein = Protein(SASA=419.0)
 urea = Cosolute(nu=1.0, chi=0.1, chiTS=-0.05)
 
 # Initialize the model
-model = BinaryCrowdingModel(
+model = CrowdingModel(
     protein=protein,
     cosolute=urea,
     eps=0.0,

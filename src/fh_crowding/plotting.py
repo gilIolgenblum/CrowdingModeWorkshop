@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from .binary import BinaryCrowdingModel
+from .binary import CrowdingModel
 from .ternary import TernaryCrowdingModel
 
 
@@ -39,7 +39,7 @@ def _clean_yerr(yerr, y_len):
 
 
 class BinaryPlotter:
-    def __init__(self, model: BinaryCrowdingModel):
+    def __init__(self, model: CrowdingModel):
         self.model = model
 
     def plot_results(self, concentration_type='phi', exp_conc=np.nan, exp_ddG=np.nan, err_ddG=np.nan,
