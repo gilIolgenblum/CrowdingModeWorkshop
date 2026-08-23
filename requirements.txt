@@ -1,0 +1,10 @@
+# Core Scientific Libraries
+numpy
+pandas
+scipy
+matplotlib
+
+# App Libraries
+streamlit
+plotly
+.

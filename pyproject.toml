@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fh_crowding"
+version = "0.1.1"
+description = "FH Crowding Research Tool: A thermodynamic mean-field model for protein folding in binary and ternary crowding mixtures."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Gil I. Olgenblum", email = "olgenblum@gmail.com"}
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scipy"
+]
+
+[project.optional-dependencies]
+app = ["streamlit", "plotly"]
+dev = ["pytest", "jupyter"]
