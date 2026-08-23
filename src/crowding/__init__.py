@@ -10,7 +10,6 @@ var = Constants
 protein = Protein
 cosolute = Cosolute
 crowding = CrowdingModel
-plotter = Plotter
 
 __all__ = [
     "Constants",
@@ -23,5 +22,4 @@ __all__ = [
     "protein",
     "cosolute",
     "crowding",
-    "plotter"
 ]
