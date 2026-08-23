@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from .binary import CrowdingModel
-from .ternary import TernaryCrowdingModel
 
 
 def _is_valid_data(x, y):
