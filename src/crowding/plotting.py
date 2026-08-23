@@ -37,7 +37,7 @@ def _clean_yerr(yerr, y_len):
     return yerr_arr
 
 
-class BinaryPlotter:
+class Plotter:
     def __init__(self, model: CrowdingModel):
         self.model = model
 

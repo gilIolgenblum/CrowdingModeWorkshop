@@ -1444,7 +1444,7 @@ if "solved_model" in st.session_state and st.session_state["solved_model_type"] 
                     plot_kwargs["err_TddS"] = st.session_state.get("err_TddS", np.nan)
 
             try:
-                plotter = crowding.BinaryPlotter(solved_model)
+                plotter = crowding.Plotter(solved_model)
                 fig = plotter.plot_results(**plot_kwargs)
                 _display_and_export_plot(fig, "crowding_binary_preset_plot", "bin_preset_plot")
             except Exception as e:

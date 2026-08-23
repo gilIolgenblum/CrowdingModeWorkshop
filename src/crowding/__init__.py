@@ -3,23 +3,25 @@ from .protein import Protein
 from .cosolute import Cosolute
 from .binary import CrowdingModel
 from .statistics import monte_carlo_subsampling
-from .plotting import BinaryPlotter
+from .plotting import Plotter
 
 # Aliases for backwards compatibility with notebooks
 var = Constants
 protein = Protein
 cosolute = Cosolute
 crowding = CrowdingModel
+plotter = Plotter
 
 __all__ = [
     "Constants",
     "Protein",
     "Cosolute",
     "CrowdingModel",
-    "BinaryPlotter",
+    "Plotter",
     "monte_carlo_subsampling",
     "var",
     "protein",
     "cosolute",
-    "crowding"
+    "crowding",
+    "plotter"
 ]
