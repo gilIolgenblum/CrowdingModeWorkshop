@@ -673,14 +673,7 @@ st.sidebar.markdown(
     unsafe_allow_html=True,
 )
 
-st.sidebar.markdown(
-    '<p style="font-size:0.78rem; color:#5D7A8A; font-weight:600; '
-    'text-transform:uppercase; letter-spacing:0.05em;">Model Configuration</p>',
-    unsafe_allow_html=True,
-)
-model_type = st.sidebar.selectbox(
-    "Model Type", ["Binary Crowding Model"]
-)
+model_type = "Binary Crowding Model"
 
 # ---------------------------------------------------------------------------
 # Sidebar — Save/Load Session
