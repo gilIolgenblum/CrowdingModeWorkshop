@@ -14,7 +14,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent))
 sys.path.append(str(Path(__file__).parent.parent / "src"))
 
-import fh_crowding
+import crowding
 import session_io
 import export
 import validation
@@ -63,7 +63,7 @@ def run_minimal_simulation_preview(model_type, fitted_model, protein, cosolute_s
     """
     if model_type == "Binary Crowding Model":
         dphiC_min = max((phiC_max - 0.0001) / 9.0, 0.0001)
-        minimal_model = fh_crowding.CrowdingModel(
+        minimal_model = crowding.CrowdingModel(
             protein=protein, cosolute=cosolute_s, 
             eps=fitted_model.eps, epsTS=fitted_model.epsTS,
             dphiC=dphiC_min, phiC_max=phiC_max, T=T
@@ -764,7 +764,7 @@ if model_type != st.session_state["last_model_type"]:
 
 st.sidebar.subheader("Protein")
 SASA = st.sidebar.number_input("SASA", step=1.0, format="%.1f", key="SASA")
-protein = fh_crowding.Protein(SASA=SASA)
+protein = crowding.Protein(SASA=SASA)
 
 st.sidebar.subheader("Temperature")
 use_T = st.sidebar.checkbox("Include Temperature", key="use_T")
@@ -838,11 +838,11 @@ if model_type == "Binary Crowding Model":
         st.caption(f"Grid: {n_points:,} pts")
 
     try:
-        cosolute = fh_crowding.Cosolute(
+        cosolute = crowding.Cosolute(
             nu=nu, chi=chi, chiTS=chiTS,
             phiC_max=0.01, dphiC=0.01
         )
-        model = fh_crowding.CrowdingModel(
+        model = crowding.CrowdingModel(
             protein=protein, cosolute=cosolute, eps=eps, epsTS=epsTS,
             dphiC=dphiC, phiC_max=phiC_max, T=T,
         )
@@ -1188,7 +1188,7 @@ with col_sim:
                     st.session_state["csv_generated"] = True
                     st.rerun()
         else:
-            filename_prefix = "fh_crowding_binary" if model_type == "Binary Crowding Model" else "fh_crowding_ternary"
+            filename_prefix = "crowding_binary" if model_type == "Binary Crowding Model" else "crowding_ternary"
             st.download_button(
                 "📥 Download Simulation Results (CSV)",
                 data=st.session_state["csv_data"],
@@ -1361,7 +1361,7 @@ with col_fit:
                 st.download_button(
                     "📥 Download Fitted Parameters (CSV)",
                     data=fit_csv,
-                    file_name="fh_crowding_binary_fit_parameters.csv",
+                    file_name="crowding_binary_fit_parameters.csv",
                     mime="text/csv",
                     key="download_fit_params_binary",
                     width="stretch"
@@ -1451,9 +1451,9 @@ if "solved_model" in st.session_state and st.session_state["solved_model_type"] 
                     plot_kwargs["err_TddS"] = st.session_state.get("err_TddS", np.nan)
 
             try:
-                plotter = fh_crowding.BinaryPlotter(solved_model)
+                plotter = crowding.BinaryPlotter(solved_model)
                 fig = plotter.plot_results(**plot_kwargs)
-                _display_and_export_plot(fig, "fh_crowding_binary_preset_plot", "bin_preset_plot")
+                _display_and_export_plot(fig, "crowding_binary_preset_plot", "bin_preset_plot")
             except Exception as e:
                 st.error(f"Error rendering preset plots: {e}")
             
@@ -1664,7 +1664,7 @@ if "solved_model" in st.session_state and st.session_state["solved_model_type"] 
                 yaxis=dict(showgrid=False, zeroline=False, showline=True, linecolor=styles.PALETTE_DARK, linewidth=1, mirror=True),
             )
             try:
-                _display_and_export_plotly(pfig, "fh_crowding_binary_custom_plot", "bin_custom_plot")
+                _display_and_export_plotly(pfig, "crowding_binary_custom_plot", "bin_custom_plot")
             except Exception as e:
                 st.error(f"Error rendering custom 1D plot: {e}")
             

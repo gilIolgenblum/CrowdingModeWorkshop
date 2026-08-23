@@ -39,7 +39,7 @@ Note: While the Streamlit app is available for non-coding users, these notebooks
 ## Minimal Working Example
 
 ```python
-from fh_crowding import Protein, Cosolute, CrowdingModel
+from crowding import Protein, Cosolute, CrowdingModel
 
 # Define protein and cosolute parameters
 protein = Protein(SASA=419.0)
