@@ -22,7 +22,9 @@ pip install -e .[app]
 
 ## Tutorials
 
-We provide several user-facing Jupyter notebook tutorials in the `tutorials/` directory to help you learn the Python API:
+We provide several Jupyter notebook tutorials in the `tutorials/` directory to help you learn the Python API:
+
+### Core Tutorials
 
 1. `00_getting_started.ipynb`: Installation, scientific background, and setup.
 2. `01_plug_and_play_simulation.ipynb`: Running forward binary simulations.
@@ -30,7 +32,16 @@ We provide several user-facing Jupyter notebook tutorials in the `tutorials/` di
 4. `03_parameter_sensitivity_and_interpretation.ipynb`: Understanding the physical effects of SASA and Flory-Huggins $\chi$.
 5. `04_exporting_results_and_figures.ipynb`: Extracting datasets and tweaking matplotlib charts for publication.
 6. `05_polymer_scaling_and_domain_size.ipynb`: Advanced simulation of polymer scaling behavior.
-7. `06_statistical_analysis_and_uncertainty.ipynb`: Implementing Monte-Carlo Cross-Validation for error analysis.
+7. `06_statistical_analysis_and_uncertainty.ipynb`: Monte-Carlo Cross-Validation for uncertainty analysis.
+
+### Exercises
+
+Apply your knowledge on new protein-cosolute pairs not seen in the tutorials:
+
+- `E1_forward_simulation_exercise.ipynb`: Forward simulation exercises (Tasks A1–A5).
+- `E2_fitting_exercise.ipynb`: Data fitting exercises including RMSE evaluation and uncertainty (Tasks B1–B5).
+
+Solutions are available to instructors in `tutorials/solutions/`.
 
 ## Minimal Working Example
 
