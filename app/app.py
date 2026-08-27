@@ -166,7 +166,6 @@ COSOLUTE_DB = {
     "Trehalose": {"nu": 11.700, "chi":  0.433, "chiTS": -1.120},
     "Sucrose":   {"nu": 11.900, "chi":  0.452, "chiTS": -0.854},
     "Urea":      {"nu":  2.479, "chi":  0.610, "chiTS": -3.650},
-    "TMAO":      {"nu":  3.980, "chi": -0.680, "chiTS": -5.708},
 }
 
 # ---------------------------------------------------------------------------
@@ -177,7 +176,6 @@ COSOLUTE_DB = {
 COSOLUTE_PAIR_DB = {
     "Custom":               {"c2": "Custom",   "c3": "Custom",    "chi23":  0.000, "chiTS23":   0.000},
     "Glycerol + Trehalose": {"c2": "Glycerol", "c3": "Trehalose", "chi23":  4.500, "chiTS23":  10.000},
-    "Urea + TMAO":          {"c2": "Urea",     "c3": "TMAO",      "chi23":  0.963, "chiTS23": -38.810},
 }
 
 COSOLUTE_NAMES      = list(COSOLUTE_DB.keys())
@@ -237,9 +235,8 @@ def load_binary_sample_callback() -> None:
         
     sample_files = {
         "Glycerol (met16)": "met16_glycerol_binary_format1.csv",
-        "TMAO (met16)": "met16_tmao_binary_format1.csv",
         "Trehalose (met16)": "met16_trehalose_binary_format1.csv",
-        "Urea (met16)": "met16_urea_binary_format1.csv"
+        "Sucrose (aq16)": "aq16_sucrose_binary_format1.csv",
     }
     file_path = Path(__file__).parent / "sample_data" / sample_files[sample_sel]
     try:
@@ -257,9 +254,8 @@ def load_binary_sample_callback() -> None:
         # Automatically select and sync the cosolute preset in the sidebar
         cosolute_preset_map = {
             "Glycerol (met16)": ("Glycerol", 3.950, 0.233, -0.480),
-            "TMAO (met16)": ("TMAO", 3.980, -0.680, -5.708),
             "Trehalose (met16)": ("Trehalose", 11.700, 0.433, -1.120),
-            "Urea (met16)": ("Urea", 2.479, 0.610, -3.650)
+            "Sucrose (aq16)": ("Sucrose", 11.900, 0.452, -0.854),
         }
         if sample_sel in cosolute_preset_map:
             preset_name, nu_val, chi_val, chiTS_val = cosolute_preset_map[sample_sel]
@@ -338,11 +334,6 @@ def load_ternary_sample_callback() -> None:
             "dH": "met16_gly_tre_ternary_format1_dH.csv",
             "TdS": "met16_gly_tre_ternary_format1_TdS.csv"
         },
-        "Urea + TMAO (aq16)": {
-            "dG": "aq16_urea_tmao_ternary_format1_dG.csv",
-            "dH": "aq16_urea_tmao_ternary_format1_dH.csv",
-            "TdS": "aq16_urea_tmao_ternary_format1_TdS.csv"
-        }
     }
     files = sample_files[sample_sel]
     try:
@@ -368,7 +359,6 @@ def load_ternary_sample_callback() -> None:
         # Automatically select and sync the cosolute pair preset in the sidebar
         pair_preset_map = {
             "Glycerol + Trehalose (met16)": ("Glycerol + Trehalose", "Glycerol", "Trehalose", 3.950, 0.233, -0.480, 11.700, 0.433, -1.120, 4.500, 10.000),
-            "Urea + TMAO (aq16)": ("Urea + TMAO", "Urea", "TMAO", 2.479, 0.610, -3.650, 3.980, -0.680, -5.708, 0.963, -38.810)
         }
         if sample_sel in pair_preset_map:
             pair_name, c2_name, c3_name, nu2_val, chi12_val, chiTS12_val, nu3_val, chi13_val, chiTS13_val, chi23_val, chiTS23_val = pair_preset_map[sample_sel]
@@ -942,9 +932,8 @@ with st.expander("📊 Upload Experimental Data & Unit Settings (Optional)", exp
             sample_options = [
                 "None",
                 "Glycerol (met16)",
-                "TMAO (met16)",
                 "Trehalose (met16)",
-                "Urea (met16)"
+                "Sucrose (aq16)",
             ]
             sample_sel = st.selectbox(
                 "Select a sample binary dataset",
