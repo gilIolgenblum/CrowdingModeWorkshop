@@ -1,6 +1,6 @@
 # FH Crowding Research Tool
 
-A thermodynamic mean-field model for protein folding in binary and ternary crowding mixtures.
+A thermodynamic mean-field model for protein crowding.
 
 ## Installation
 
@@ -41,8 +41,6 @@ Apply your knowledge on new protein-cosolute pairs not seen in the tutorials:
 - `E1_forward_simulation_exercise.ipynb`: Forward simulation exercises (Tasks A1–A5).
 - `E2_fitting_exercise.ipynb`: Data fitting exercises including RMSE evaluation and uncertainty (Tasks B1–B5).
 
-Solutions are available to instructors in `tutorials/solutions/`.
-
 ## Minimal Working Example
 
 ```python
@@ -71,7 +69,7 @@ print(results.head())
 
 ## Assumptions
 
-This tool implements a mean-field model of Flory-Huggins type, accounting for excluded volume (nu), non-ideal mixing (chi, chiTS), and soft interaction (eps, epsTS) effects around a protein domain.
+This tool implements a mean-field model based on Flory-Huggins theory, accounting for excluded volume (nu), non-ideal mixing (chi, chiTS), and soft interaction (eps, epsTS) effects around a protein domain.
 
 ## License
 MIT License
@@ -80,7 +78,9 @@ MIT License
 
 If you use this software or Streamlit app, please cite the associated publications and the software repository.
 
-Software repository: https://github.com/gilIolgenblum/ProteinCrowding
+Software repository: https://github.com/gilIolgenblum/CrowdingModeWorkshop 
+
+App version: https://crowdingmodeworkshop-jg6xuovuytncequyqqdhqh.streamlit.app/
 
 Developer: Gil I. Olgenblum  
 ORCID: https://orcid.org/0000-0002-4514-5516
