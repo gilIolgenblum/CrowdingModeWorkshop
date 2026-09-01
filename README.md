@@ -82,7 +82,8 @@ App version: https://crowdingmodeworkshop-jg6xuovuytncequyqqdhqh.streamlit.app/
 
 Developer: Gil I. Olgenblum  
 ORCID: https://orcid.org/0000-0002-4514-5516
-Email: [EMAIL_ADDRESS]
+
+Email: gil.olgenblum@biu.ac.il
 
 A versioned software DOI will be added after archival release.
 
