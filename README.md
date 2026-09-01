@@ -28,15 +28,15 @@ We provide several Jupyter notebook tutorials in the `tutorials/` directory to h
 
 1. `00_getting_started.ipynb`: Installation, scientific background, and setup.
 2. `01_plug_and_play_simulation.ipynb`: Running forward binary simulations.
-2.1. `E1_forward_simulation_exercise.ipynb`: Forward simulation exercises.
+- `E1_forward_simulation_exercise.ipynb`: Forward simulation exercises.
 3. `02_fit_experimental_data.ipynb`: Fitting soft interaction parameters to binary data.
-3.1. `E2_fitting_exercise.ipynb`: Data fitting exercises.
+- `E2_fitting_exercise.ipynb`: Data fitting exercises.
 4. `03_parameter_sensitivity_and_interpretation.ipynb`: Understanding the physical effects of SASA and Flory-Huggins $\chi$.
 5. `04_exporting_results_and_figures.ipynb`: Extracting datasets and tweaking matplotlib charts for publication.
 6. `05_polymer_scaling_and_domain_size.ipynb`: Advanced simulation of polymer scaling behavior.
 7. `06_statistical_analysis_and_uncertainty.ipynb`: Monte-Carlo Cross-Validation for uncertainty analysis.
-7.1. `E3_uncertainty_analysis_exercise.ipynb`: Uncertainty analysis exercises.
-8. `E4_determination_of_parameters_exercise.ipynb`: Determination of FH parameters from experimental data.
+- `E3_uncertainty_analysis_exercise.ipynb`: Uncertainty analysis exercises.
+- `E4_determination_of_parameters_exercise.ipynb`: Determination of FH parameters from experimental data.
 
 
 ## Minimal Working Example
