@@ -24,22 +24,20 @@ pip install -e .[app]
 
 We provide several Jupyter notebook tutorials in the `tutorials/` directory to help you learn the Python API:
 
-### Core Tutorials
+### Core Tutorials and Exercises
 
 1. `00_getting_started.ipynb`: Installation, scientific background, and setup.
 2. `01_plug_and_play_simulation.ipynb`: Running forward binary simulations.
+2.1. `E1_forward_simulation_exercise.ipynb`: Forward simulation exercises.
 3. `02_fit_experimental_data.ipynb`: Fitting soft interaction parameters to binary data.
+3.1. `E2_fitting_exercise.ipynb`: Data fitting exercises.
 4. `03_parameter_sensitivity_and_interpretation.ipynb`: Understanding the physical effects of SASA and Flory-Huggins $\chi$.
 5. `04_exporting_results_and_figures.ipynb`: Extracting datasets and tweaking matplotlib charts for publication.
 6. `05_polymer_scaling_and_domain_size.ipynb`: Advanced simulation of polymer scaling behavior.
 7. `06_statistical_analysis_and_uncertainty.ipynb`: Monte-Carlo Cross-Validation for uncertainty analysis.
+7.1. `E3_uncertainty_analysis_exercise.ipynb`: Uncertainty analysis exercises.
+8. `E4_determination_of_parameters_exercise.ipynb`: Determination of FH parameters from experimental data.
 
-### Exercises
-
-Apply your knowledge on new protein-cosolute pairs not seen in the tutorials:
-
-- `E1_forward_simulation_exercise.ipynb`: Forward simulation exercises (Tasks A1–A5).
-- `E2_fitting_exercise.ipynb`: Data fitting exercises including RMSE evaluation and uncertainty (Tasks B1–B5).
 
 ## Minimal Working Example
 
@@ -84,6 +82,7 @@ App version: https://crowdingmodeworkshop-jg6xuovuytncequyqqdhqh.streamlit.app/
 
 Developer: Gil I. Olgenblum  
 ORCID: https://orcid.org/0000-0002-4514-5516
+Email: [EMAIL_ADDRESS]
 
 A versioned software DOI will be added after archival release.
 
